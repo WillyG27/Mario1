@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Character Base 1 (Face Left).png" type="Texture" id=1]
+[ext_resource path="res://BOB.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 49.3776
+height = 66.5491
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 386.64, 188.024 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.04456, -6.26719 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="CollisionShape2D"]
+position = Vector2( 68.7276, 20.971 )
+scale = Vector2( 6.87961, 6.49782 )
+texture = ExtResource( 1 )
